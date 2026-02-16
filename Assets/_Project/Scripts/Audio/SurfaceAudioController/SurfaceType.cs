@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public enum SurfaceID { GRASS, ROCK, WOOD, WATER };

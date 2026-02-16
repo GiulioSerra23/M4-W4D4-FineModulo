@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Rendering.LookDev;
+
 using UnityEngine;
-using UnityEngine.Windows;
-using UnityEngine.Events;
 
 public class Mover3D : MonoBehaviour
 {
