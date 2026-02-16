@@ -9,6 +9,7 @@ public enum PoolType
     POOL_BULLET_ROCK,
 
     POOL_TRAP_SLOW,
+    POOL_TRAP_LOG,
 }
 
 [System.Serializable]

@@ -4,7 +4,7 @@ using UnityEngine;
 public class ObjectSpawner : MonoBehaviour
 {
     [Header ("References")]
-    [SerializeField] private GameObject _objectPrefab;
+    [SerializeField] private PoolType _poolType;
 
     [Header ("Spawn Settings")]
     [SerializeField] private float _spawnInterval = 2f;
@@ -12,14 +12,15 @@ public class ObjectSpawner : MonoBehaviour
     private float _lastSpawn;
     private bool _canSpawn;
 
-    protected bool CanSpawnNow()
-    {
-        return Time.time - _lastSpawn >= _spawnInterval && _canSpawn;
-    }
+    protected bool CanSpawnNow() => Time.time - _lastSpawn >= _spawnInterval && _canSpawn;
 
     private void InstantiateObject()
     {
-        GameObject objectClone = Instantiate(_objectPrefab, transform.position, transform.rotation);
+        ObjectPool bulletPool = PoolManager.Instance.GetPool(_poolType);
+        PoolableObject obj = bulletPool.Get();               
+    
+        obj.transform.position = transform.position;
+        obj.transform.rotation = transform.rotation;
     }
 
     private void SpawnObject()

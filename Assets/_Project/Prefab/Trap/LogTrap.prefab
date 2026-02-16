@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc2d1f6df52172c4fb35da474a9f52d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collisionSound: 32
   _damage: 10
   _lifeSpan: 7
 --- !u!1001 &2888433765439445622
