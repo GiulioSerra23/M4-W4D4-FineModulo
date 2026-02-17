@@ -65,8 +65,6 @@ public class Mover3D : MonoBehaviour
         float currentSpeed = _baseSpeed * _speedMultipier;
         Vector3 velocity = _input * currentSpeed;
         _rb.velocity = new Vector3(velocity.x, _rb.velocity.y, velocity.z);
-
-        _animHandler.SetVerticalSpeed(_rb.velocity.y);
     }
 
     private void Rotate()

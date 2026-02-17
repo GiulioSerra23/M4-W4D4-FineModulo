@@ -30,3 +30,4 @@ public static class LevelProgression
         return PlayerPrefs.GetInt($"Level_{levelIndex}_Completed", 0) == 1;
     }
 }
+// Così com'è uscendo dal play i progressi rimangono quindi bisogna pulire i prefs da edit, perchè non avevo ben capito come si facesse per ripulirli in automatico

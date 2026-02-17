@@ -5,7 +5,6 @@ public class AnimationParamHandler : MonoBehaviour
 {
     [Header ("Param Names")]
     [SerializeField] private string _forwardName = "forward";
-    [SerializeField] private string _vSpeedName = "vSpeed";
     [SerializeField] private string _isGroundedName = "isGrounded";
     [SerializeField] private string _isAttached = "isAttached";
     [SerializeField] private string _jumpName = "jump";
@@ -21,11 +20,6 @@ public class AnimationParamHandler : MonoBehaviour
     public void SetForward(float speed)
     {
         _anim.SetFloat(_forwardName, speed);
-    }
-
-    public void SetVerticalSpeed(float speed)
-    {
-        _anim.SetFloat(_vSpeedName, speed);
     }
 
     public void OnIsGroundedChanged(bool isGrounded)

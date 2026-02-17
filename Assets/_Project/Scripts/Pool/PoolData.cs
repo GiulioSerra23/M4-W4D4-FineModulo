@@ -13,7 +13,7 @@ public enum PoolType
 }
 
 [System.Serializable]
-public struct PoolEntry
+public class PoolEntry
 {
     public PoolType PoolType;
     public ObjectPool Pool;

@@ -25,11 +25,11 @@ public class AudioManager : MonoBehaviour
     {
         foreach (var sound in _sounds)
         {
-            if (sound.iD == id)
+            if (sound.ID == id)
             {
-                if (sound.clips.Length == 0) return;
+                if (sound.Clips.Length == 0) return;
 
-                AudioClip clip = sound.clips[Random.Range(0, sound.clips.Length)];
+                AudioClip clip = sound.Clips[Random.Range(0, sound.Clips.Length)];
                 _audioSource.pitch = Random.Range(0.95f, 1.05f);
                 _audioSource.PlayOneShot(clip);
                 return;

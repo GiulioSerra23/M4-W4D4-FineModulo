@@ -34,8 +34,8 @@ public enum SoundID
 }
 
 [System.Serializable]
-public struct SoundData
+public class SoundData
 {
-    public SoundID iD;
-    public AudioClip[] clips;
+    public SoundID ID;
+    public AudioClip[] Clips;
 }
